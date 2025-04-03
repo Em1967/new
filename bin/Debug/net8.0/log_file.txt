@@ -1,0 +1,2 @@
+2025-04-03 12:46:14.0951|INFO|new.Program|Program started
+2025-04-03 12:46:14.1256|INFO|new.Program|Program ended
