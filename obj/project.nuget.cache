@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ARej7DqQf4alVZivd/WBsBrM9wVKP5sV4mKx+riJd9qU1IIgj0G+gyPlG5eIUQk/s3daBNOLBNgkisZBFczsqg==",
+  "dgSpecHash": "jCBfbSOB81A4m31BA1ItyHoLlZLUHmxkixnzk9VjYcSpXrdAKDoLRQByUv53PluxDHPm5V79KLqSzNyn2ddfNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\emichel\\new\\new.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\emichel\\.nuget\\packages\\nlog\\5.3.3\\nlog.5.3.3.nupkg.sha512"
+  ],
   "logs": []
 }
