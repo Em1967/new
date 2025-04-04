@@ -11,3 +11,12 @@
 2025-04-03 13:24:00.8288|INFO|new.Program|Program started
 2025-04-03 13:24:08.8737|INFO|new.Program|Blog added - "cookies"
 2025-04-03 13:24:09.1154|INFO|new.Program|Program ended
+2025-04-03 19:39:13.3588|INFO|new.Program|Program started
+2025-04-03 19:40:15.3840|INFO|new.Program|Program started
+2025-04-03 19:40:20.9437|INFO|new.Program|Displayed 3 blogs
+2025-04-03 19:40:37.7221|INFO|new.Program|Blog added - "cool things"
+2025-04-03 19:40:40.9266|INFO|new.Program|Displayed 4 blogs
+2025-04-03 19:40:49.4394|INFO|new.Program|Displayed 4 blogs
+2025-04-03 19:41:20.7379|INFO|new.Program|Post added to Blog 4 - Title: "4060ti"
+2025-04-03 19:41:25.1985|INFO|new.Program|Displayed 4 blogs
+2025-04-03 19:41:37.1958|INFO|new.Program|Displayed 1 posts for Blog ID 4

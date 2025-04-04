@@ -6,6 +6,11 @@
  
  logger.Info("Program started");
  
+ //Menu option
+
+
+
+ 
  // Create and save a new Blog
  Console.Write("Enter a name for a new Blog: ");
  var name = Console.ReadLine();
