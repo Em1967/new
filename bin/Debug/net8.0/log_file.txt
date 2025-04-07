@@ -20,3 +20,8 @@
 2025-04-03 19:41:20.7379|INFO|new.Program|Post added to Blog 4 - Title: "4060ti"
 2025-04-03 19:41:25.1985|INFO|new.Program|Displayed 4 blogs
 2025-04-03 19:41:37.1958|INFO|new.Program|Displayed 1 posts for Blog ID 4
+2025-04-06 22:28:53.9801|INFO|new.Program|Program started
+2025-04-06 22:29:11.6593|INFO|new.Program|Blog added - "japan"
+2025-04-06 22:29:33.6696|INFO|new.Program|Post created - BlogID: 5, Title: "cherry blossoms"
+2025-04-06 22:29:40.1983|INFO|new.Program|Displayed posts for BlogID 5 - 1 post(s)
+2025-04-06 22:29:44.2151|INFO|new.Program|Program ended
