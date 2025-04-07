@@ -96,6 +96,45 @@ while (!exit)
             db.SaveChanges();
             logger.Info("Post created - BlogID: {blogId}, Title: {title}", blogId, title);
             break;
+
+             case "4":
+            var allBlogs = db.Blogs.OrderBy(b => b.BlogId).ToList();
+            if (allBlogs.Count == 0)
+            {
+                Console.WriteLine("No blogs available.");
+                break;
+            }
+
+            Console.WriteLine("Choose a Blog by ID:");
+            foreach (var b in allBlogs)
+            {
+                Console.WriteLine($"ID: {b.BlogId}, Name: {b.Name}");
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int selectedId))
+            {
+                Console.WriteLine("Invalid Blog ID.");
+                break;
+            }
+
+            var blogToView = db.Blogs.FirstOrDefault(b => b.BlogId == selectedId);
+            if (blogToView == null)
+            {
+                Console.WriteLine("Blog not found.");
+                break;
+            }
+
+            var posts = db.Posts.Where(p => p.BlogId == blogToView.BlogId).ToList();
+            Console.WriteLine($"Posts for Blog: {blogToView.Name} ({posts.Count} total)");
+
+            foreach (var p in posts)
+            {
+                Console.WriteLine($"\nTitle: {p.Title}");
+                Console.WriteLine($"Content: {p.Content}");
+            }
+
+            logger.Info("Displayed posts for BlogID {id} - {count} post(s)", selectedId, posts.Count);
+            break;
 }
 
 
