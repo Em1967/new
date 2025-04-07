@@ -135,6 +135,17 @@ while (!exit)
 
             logger.Info("Displayed posts for BlogID {id} - {count} post(s)", selectedId, posts.Count);
             break;
+            case "5":
+            exit = true;
+            break;
+
+        default:
+            Console.WriteLine("Invalid option.");
+            break;
+    }
+}
+
+logger.Info("Program ended");
 }
 
 
