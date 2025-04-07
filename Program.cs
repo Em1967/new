@@ -48,6 +48,54 @@ while (!exit)
             db.AddBlog(newBlog);
             logger.Info("Blog added - {name}", name);
             break;
+            case "3":
+            var blogList = db.Blogs.OrderBy(b => b.BlogId).ToList();
+            if (blogList.Count == 0)
+            {
+                Console.WriteLine("No blogs available. Please add one first.");
+                break;
+            }
+
+            Console.WriteLine("Choose a Blog by ID:");
+            foreach (var b in blogList)
+            {
+                Console.WriteLine($"ID: {b.BlogId}, Name: {b.Name}");
+            }
+
+            if (!int.TryParse(Console.ReadLine(), out int blogId))
+            {
+                Console.WriteLine("Invalid Blog ID.");
+                break;
+            }
+
+            var selectedBlog = db.Blogs.FirstOrDefault(b => b.BlogId == blogId);
+            if (selectedBlog == null)
+            {
+                Console.WriteLine("Blog not found.");
+                break;
+            }
+
+            Console.Write("Enter post title: ");
+            var title = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("Post title cannot be empty.");
+                break;
+            }
+
+            Console.Write("Enter post content: ");
+            var content = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                Console.WriteLine("Post content cannot be empty.");
+                break;
+            }
+
+            var post = new Post { Title = title, Content = content, BlogId = selectedBlog.BlogId };
+            db.Posts.Add(post);
+            db.SaveChanges();
+            logger.Info("Post created - BlogID: {blogId}, Title: {title}", blogId, title);
+            break;
 }
 
 
