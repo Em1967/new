@@ -35,6 +35,19 @@ while (!exit)
                 Console.WriteLine($"ID: {blog.BlogId}, Name: {blog.Name}");
             }
             break;
+             case "2":
+            Console.Write("Enter a name for a new Blog: ");
+            var name = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                Console.WriteLine("Blog name cannot be empty.");
+                break;
+            }
+
+            var newBlog = new Blog { Name = name };
+            db.AddBlog(newBlog);
+            logger.Info("Blog added - {name}", name);
+            break;
 }
 
 
